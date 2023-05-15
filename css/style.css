@@ -1,0 +1,522 @@
+html{
+  box-sizing: border-box;
+  font-size: 62.5%;/** Reset para REMS - 62.5% = 10px de 16px **/
+}
+
+body {
+  background: #60b6e8;
+}
+
+/**Globales**/
+img{
+  max-width: 100%; /* ajusta las imagenes a su contenedor */
+}
+.contenedor{
+  max-width: 100%; /** = 1200px **/
+  margin: 0 auto;
+}
+
+
+/** Utilidades **/
+.fw-700 {
+  font-weight: 700;
+}
+.centrar-texto {
+  text-align: center;
+}
+
+
+
+
+/*Header*/
+.site-header{
+  /*background-color: #60b6e8;*/
+  padding: 1rem 0 3rem 0;
+}
+.site-header.inicio {
+  background-image: url(../images/foto_principal.png);
+  background-position: center center;
+  background-size: cover; /* usa todas las proporsiones disponibles pero 
+                          siempre respetando el resto de medidas*/
+  /*height: 100vh;*/
+  min-height: 70rem;
+}
+.contenido-header{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contenido-header h1 {
+  color: #ffffff;
+  max-width: 100%;
+  line-height: 9;
+  text-align: center;
+  font-family: 'Fraunces', serif;
+  font-weight: bold;
+  font-size: 4rem;
+}
+.barra{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2.5rem;
+}
+
+/*Navegacion*/
+.navegacion a{
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.8rem; /** = 18px **/
+  margin-right: 2rem;
+  font-family: 'Lato', sans-serif;
+}
+.navegacion a.boton-contact {
+  background-color: #fff; 
+  border-radius: 20px; /* radio de curvatura para los bordes */
+  padding: 10px 20px; /* espacio interno del botón */
+  color: #030303; 
+  text-decoration: none; 
+  font-family: 'Fraunces', serif;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.navegacion a.boton-contact:hover {
+background-color: #98d1f1;
+color: rgb(249, 249, 250);
+}
+/*Hacer que cambie el color cuando mouse pasa por encima*/
+.navegacion a:hover{
+  color: rgb(26, 26, 160);
+  cursor: pointer;
+}
+.navegacion a:last-of-type{
+  margin: 10;
+}
+.logo {
+  margin-left: 3rem;
+}
+
+/*  @media  -  Header Navegacion*/
+
+@media (min-width: 768px) {
+  /*Header*/
+  .site-header{
+    /*background-color: #60b6e8;*/
+    padding: 1rem 0 3rem 0;
+  }
+  .site-header.inicio {
+    background-image: url(../images/foto_principal.png);
+    background-position: center center;
+    background-size: cover; /* usa todas las proporsiones disponibles pero 
+                            siempre respetando el resto de medidas*/
+    /*height: 100vh;*/
+    min-height: 70rem;
+  }
+  .contenido-header{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .contenido-header h1 {
+    color: #ffffff;
+    max-width: 100%;
+    line-height: 9;
+    text-align: center;
+    font-family: 'Fraunces', serif;
+    font-weight: bold;
+    font-size: 4rem;
+  }
+  .barra{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2.5rem;
+  }  
+  .navegacion a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.8rem; /** = 18px **/
+    margin-right: 2rem;
+    font-family: 'Lato', sans-serif;
+  }
+  .navegacion a.boton-contact {
+    background-color: #fff; 
+    border-radius: 20px; /* radio de curvatura para los bordes */
+    padding: 10px 20px; /* espacio interno del botón */
+    color: #030303; 
+    text-decoration: none; 
+    font-family: 'Fraunces', serif;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  .navegacion a.boton-contact:hover {
+  background-color: #98d1f1;
+  color: rgb(249, 249, 250);
+  }
+  /*Hacer que cambie el color cuando mouse pasa por encima*/
+  .navegacion a:hover{
+    color: rgb(26, 26, 160);
+    cursor: pointer;
+  }
+  .navegacion a:last-of-type{
+    margin: 10;
+  }
+  .logo {
+    margin-left: 3rem;
+  }
+}
+
+
+
+
+/** Anuncios **/
+
+.contenedor-anuncios {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: -1rem;
+  margin-right: -2rem;
+}
+.anuncio {
+  display: grid;
+  align-items: center;
+  background-color: #fff;
+}
+.img-egg {
+  background-color: #f8d825;
+}
+.img-ice {
+  background-color: #ff6b66;
+}
+.img-cererzas {
+  background-color: #9ddacaf6;
+  align-items: start
+}
+.contenido-anuncio {    
+  padding-left: 15rem;
+  padding-right: 15rem;
+}
+.contenido-anuncio p {
+  font-size: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(121, 127, 131);
+}
+.contenido-anuncio h1 {
+  font-size: 5rem;
+  font-weight: bold;
+}
+.contenido-anuncio h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #030303;
+  text-decoration: none;
+}
+.contenido-anuncio h2:hover {
+  text-decoration: underline;
+  text-decoration-color: #f8d825;
+  text-decoration-thickness: 6px;
+}
+
+
+/** @media  -  Anuncios **/
+@media (min-width: 768px) {
+  .contenedor-anuncios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: -1rem;
+    margin-right: -2rem;
+  }
+  .anuncio {
+    display: grid;
+    align-items: center;
+  }
+  .img-cererzas {
+    align-items: start
+  }
+  .contenido-anuncio {    
+    padding-left: 15rem;
+    padding-right: 15rem;
+  }
+  .contenido-anuncio p {
+    font-size: 2rem;
+  }
+  .contenido-anuncio h1 {
+    font-size: 5rem;
+    font-weight: bold;
+  }
+  .contenido-anuncio h2 {
+    font-size: 2rem;
+  }
+  .contenido-anuncio h2:hover {
+    text-decoration-thickness: 6px;
+  }
+}
+
+
+
+/* Info personas */
+
+.info-personas {
+  background-color: #fff;
+}
+.info-personas p {
+  color: #8d8a8a;
+}
+.info-personas h1 {
+  font-size: 3rem;
+  font-family: 'Fraunces', serif;
+  font-weight: bold;
+  text-align: center;
+  color: #333232;
+  margin-top: 15rem; /* espacio desde el inicio hacia el texto h1*/
+}
+.info-personas h2 {
+  font-size: 3rem;
+  font-family: 'Fraunces', serif;
+  font-weight: bold;
+  text-align: center;
+}
+.info-personas h3 {
+  font-size: 1.5rem;
+  color: #777575;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.contenedor-personas{
+    display: flex;
+    justify-content: center;   
+    text-align: center; 
+}
+.anuncio-personal {
+  display: flex;
+  flex-direction: column;
+  position: relative;/*obs*/
+  margin-bottom: 15rem; /* espacio desde el final hacia el texto h3*/
+}
+.anuncio-personal img {
+  max-width: 7rem;
+  align-self: center;
+  margin-top: 6rem;
+  margin-bottom: 4rem;
+}
+.anuncio-personal .parrafo {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 14rem;
+  font-size: 2rem;
+  font-family: 'Barlow', sans-serif;
+  text-align: center;
+}
+.anuncio-personal .personal-name {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  align-self: center;
+}
+.anuncio-personal:first-child {
+  padding-right: 4rem;
+  padding-left: 8rem;
+}
+.anuncio-personal:last-child {
+  padding-right: 8rem;
+  padding-left: 4rem;
+}
+
+/* imagenes finales */
+.imagenes-finales {
+  display: grid; /* Hace que los elementos dentro del contenedor se muestren en una fila */
+  grid-template-columns: repeat(4, 1fr);
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+
+/** footer **/
+footer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #9ddacaf6;
+  color: #000000;
+  padding: 6rem 0;
+  height: 20rem;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 4rem;
+}
+footer .logo {
+  align-self:center;
+}  
+footer nav ul { /* pone los nav en horizontal */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}  
+footer nav ul li { /* tamaño y seáracion de nav */
+  margin: 0 2rem;
+  font-size: 1.5rem;
+}
+footer nav ul li a { /* cada palabra cambia de color */
+  text-decoration: none;
+  font-family: 'Barlow', sans-serif;
+  color: #405f57f6;
+}
+footer nav ul li a:hover {
+  color: #fff;
+}
+footer .social-media {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}  
+footer .social-media i {
+  margin: 2rem 2rem;
+}  
+nav.redes-sociales {
+  text-align: center;
+}
+nav.redes-sociales a {
+  color: #546b65f6;
+  font-size: 2em;
+  margin-right: 20px;
+}
+nav.redes-sociales a:last-child{
+  margin-right: 0;
+}
+
+/* @media  -  Info personas */
+@media (min-width: 768px) {
+  .info-personas {
+    grid-column: 1/3;
+  }
+
+  .info-personas p {
+    font-weight: 500;
+  }
+  .info-personas h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15rem; /* espacio desde el inicio hacia el texto h1*/
+  }
+  .info-personas h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  .info-personas h3 {
+    font-size: 1.5rem;
+  }
+  .contenedor-personas{
+      display: flex;
+      justify-content: center;   
+      text-align: center; 
+  }
+  .anuncio-personal {
+    display: flex;
+    flex-direction: column;
+    position: relative;/*obs*/
+    margin-bottom: 15rem; /* espacio desde el final hacia el texto h3*/
+  }
+  .anuncio-personal img {
+    max-width: 7rem;
+    align-self: center;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+  }
+  .anuncio-personal .parrafo {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 14rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .anuncio-personal .personal-name {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    align-self: center;
+  }
+  .anuncio-personal:first-child {
+    padding-right: 4rem;
+    padding-left: 8rem;
+  }
+  .anuncio-personal:last-child {
+    padding-right: 8rem;
+    padding-left: 4rem;
+  }
+
+ 
+  /* imagenes finales */
+  .imagenes-finales {
+    display: grid; /* Hace que los elementos dentro del contenedor se muestren en una fila */
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+  
+
+  /** footer **/
+  footer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 6rem 0;
+    height: 20rem;
+  }
+  
+  footer .container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 4rem;
+  }
+  footer .logo {
+    align-self:center;
+  }  
+  footer nav ul { /* pone los nav en horizontal */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }  
+  footer nav ul li { /* tamaño y seáracion de nav */
+    margin: 0 2rem;
+    font-size: 1.5rem;
+  }
+  footer .social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+  }  
+  footer .social-media i {
+    margin: 2rem 2rem;
+  }  
+  nav.redes-sociales {
+    text-align: center;
+  }
+  nav.redes-sociales a {
+    font-size: 2em;
+    margin-right: 20px;
+  }
+  nav.redes-sociales a:last-child{
+    margin-right: 0;
+  }
+
+}
+
+@media (min-width: 400px) {
+
+}
+
+
+
+
+
+
+
+/*# sourceMappingURL=style.css.map */
